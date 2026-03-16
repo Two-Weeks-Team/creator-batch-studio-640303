@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f9fafb; /* light gray */
+  --foreground: #111827; /* dark */
+  --primary: #4f46e5; /* indigo */
+  --accent: #f472b6; /* pink */
+  --card: #ffffff; /* white */
+  --muted: #e5e7eb; /* muted gray */
+  --border: #d1d5db; /* border gray */
+  --success: #22c55e; /* green */
+  --warning: #f59e0b; /* amber */
+  --radius: 0.5rem;
+  --shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Subtle textured background */
+body {
+  background: radial-gradient(circle at 10% 20%, var(--accent) 0%, transparent 50%),
+    linear-gradient(135deg, var(--background) 0%, #e0e7ff 100%);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* Card styling helper */
+.card {
+  @apply bg-card rounded-lg shadow-md border border-border p-4;
+}
